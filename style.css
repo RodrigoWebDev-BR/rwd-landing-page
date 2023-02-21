@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;    
+    text-decoration: none;
+    list-style: none;   
+    --primary: #1C1C1C;
+    --secundary: #363636;
+    --text: #ff5500;
+    --textsec: #FFFAFA;                  
+}
+
+body {
+    background-color: var(--primary);
+}
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;    
+}
+
+.logotipo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-top: 30px;  
+}
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    align-items: center; 
+    gap: 30px;    
+}
+
+.navmenu { 
+    color: var(--text);     
+    font: 400 24px 'Michroma', sans-serif;
+    border-bottom: 1.5px solid;                                                
+}
+
+.navmenu:hover {
+    color: var(--textsec);
+    cursor: pointer;
+}
+
+.container {
+    margin: 30px;   
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 2fr);
+    gap: 30px;
+}
+
+.section-left {
+    background-color: var(--secundary);
+    grid-column: 1;
+    grid-row: 1;
+    border-radius: 20px;
+    text-align: center;
+    padding: 30px;
+}
+
+.section-left > img {
+    border-radius: 50%;
+    width: 250px;    
+    height: 250px;
+}
+/*
+.campos {
+    border-radius: 15px;
+    width: 500px;
+    height: 40px;
+    margin: 10px;
+}
+
+.enviar {
+    border-radius: 15px;
+    width: 500px;
+    height: 40px;
+    margin: 10px;
+}
+*/
+.section-rigth {
+    background-color: var(--secundary); 
+    grid-column: 2;
+    grid-row: 1;
+    border-radius: 20px;  
+}
+
+.section-footer {
+    background-color: var(--secundary);   
+    grid-column: 1/ span 2;
+    grid-row: 2;
+    border-radius: 20px;
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    margin: 30px;
+}
+
+footer > a {
+    cursor: pointer;
+}
+
+/* Responsive */
+
+@media screen and (max-width: 720px) {
+    header {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .navbar {
+        display: flex;
+        flex-direction: column;
+        margin-top: 30px;
+    }
+}
